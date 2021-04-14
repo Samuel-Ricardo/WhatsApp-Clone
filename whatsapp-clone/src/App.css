@@ -1,0 +1,36 @@
+
+:root{
+
+  --body-background: #D2DBDC;
+  --app-background: #FDEDED;
+  --sidebar-border-color: #DDD;
+
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+
+  background-color: --body-background;
+  margin: 0;
+  font-family: 'Segoe UI', Helvetica Nue, Helvetica, Lucida Grande, Arial;
+}
+
+.app-window {
+
+  display: flex;
+  height: 100vh;
+  background-color: --app-background;
+}
+
+.sidebar {
+
+  width: 35%;
+  max-width: 415px;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid --sidebar-border-color;
+}
