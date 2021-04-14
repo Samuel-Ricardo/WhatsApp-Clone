@@ -34,3 +34,25 @@ body {
   flex-direction: column;
   border-right: 1px solid --sidebar-border-color;
 }
+
+header {
+
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+}
+
+header .img-perfil {
+
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+header .buttons {
+
+  display: flex;
+}
