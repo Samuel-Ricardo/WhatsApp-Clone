@@ -2,9 +2,14 @@
 :root{
 
   --body-background: #D2DBDC;
-  --app-background: #FDEDED;
+  --app-background: #f8f9fb;
   --sidebar-border-color: #DDD;
 
+  --header-background-color: #EDEDED;
+
+  --search-area-background: #F6F6F6;
+  --search-area-border-color: #EEE;
+  --search-input-background-color: #FFF;
 }
 
 
@@ -14,7 +19,7 @@
 
 body {
 
-  background-color: --body-background;
+  background-color: var(--body-background);
   margin: 0;
   font-family: 'Segoe UI', Helvetica Nue, Helvetica, Lucida Grande, Arial;
 }
@@ -23,7 +28,7 @@ body {
 
   display: flex;
   height: 100vh;
-  background-color: --app-background;
+  background-color: var(--app-background);
 }
 
 .sidebar {
@@ -32,7 +37,7 @@ body {
   max-width: 415px;
   display: flex;
   flex-direction: column;
-  border-right: 1px solid --sidebar-border-color;
+  border-right: 1px solid var(--sidebar-border-color);
 }
 
 header {
@@ -42,6 +47,8 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 0 15px;
+
+  background-color: var(--header-background-color);
 }
 
 header .img-perfil {
@@ -72,4 +79,37 @@ header .button-group .button {
   cursor:pointer;
 }
 
+.search-area {
 
+  background-color: var(--search-area-background);
+
+  border-bottom: 1px solid var(--search-area-border-color);
+
+  padding: 5px 15px;
+
+}
+
+.search-input {
+
+  background-color: var(--search-input-background-color);
+
+  height: 40px;
+
+  border-radius: 20px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0px 10px;
+
+}
+
+.search-input input {
+
+  flex: 1;
+  border: 0;
+  outline: 0;
+
+  background-color: transparent;
+  margin-left: 10px;
+}

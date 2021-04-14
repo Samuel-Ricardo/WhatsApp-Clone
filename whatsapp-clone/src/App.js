@@ -46,7 +46,7 @@ function App() {
         <div className='search-area'>
 
           <div className='search-input'>
-            <Search />
+            <Search fontSize='small' style={{color: buttonColor}}/>
             <input type='search' placeholder='Pedro pesquisas >:()...'/>
           </div>
 
