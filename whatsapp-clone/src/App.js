@@ -43,7 +43,7 @@ function App() {
 
         </header>
 
-        <div className='search-area'>
+        <div className='pm'>
 
           <div className='search-input'>
             <Search fontSize='small' style={{color: buttonColor}}/>
