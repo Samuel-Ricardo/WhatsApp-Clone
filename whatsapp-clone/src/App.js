@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import './App.css';
 
 import DonutLargeIcon from '@material-ui/icons/DonutLarge';
@@ -9,6 +9,8 @@ import SearchIcon from '@material-ui/icons/Search';
 import Search from '@material-ui/icons/Search';
 
 function App() {
+
+  const [contacts, setContacts] = React.useState([{}, {}, {}, {}])
 
 
   const buttonColor = '#919191'
@@ -43,7 +45,7 @@ function App() {
 
         </header>
 
-        <div className='pm'>
+        <div className='search-area'>
 
           <div className='search-input'>
             <Search fontSize='small' style={{color: buttonColor}}/>
@@ -54,6 +56,13 @@ function App() {
         </div>
 
         <div className='chat-list'>
+
+          {contacts.map((contact, key) => (
+
+                <p>Pedro Contatos >:() </p>
+              ))
+          }
+
           Pedro Contatos ):()
         </div>
 
