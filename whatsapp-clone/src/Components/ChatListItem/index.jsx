@@ -5,14 +5,16 @@ import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 
 import Colors from '../../util/colors'
 
-/*<img src={}/>*/
-export default () => {
+
+
+export default (props) => {
 
 
   return (
 
     <div className='contact-card'>
 
+      <img src={} className='avatar'/>
       <AccountCircleIcon className='avatar' style={{color: Colors.DEFAULT_BUTTON_COLOR }} />
 
       <div className='lines'>
