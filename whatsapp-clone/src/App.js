@@ -79,7 +79,12 @@ function App() {
 
           {contacts.map((contact, key) => (
 
-            <ChatListItem key={key} name={contact.name} image={contact.image}/>
+            <ChatListItem
+              key={key}
+              contact={contact}
+              onClick={() => setActiveChat(contacts[key])}
+              active={activeChat.id === contact.id}
+            />
 
               ))
           }
@@ -93,7 +98,11 @@ function App() {
 
         {activeChat.id !== undefined &&
 
-          <Chat name={activeChat.name} image={activeChat.image}/>
+          <Chat
+            name={activeChat.name}
+            image={activeChat.image}
+
+          />
         }
 
         {activeChat.id === undefined &&

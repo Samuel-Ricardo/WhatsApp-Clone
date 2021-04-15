@@ -7,14 +7,15 @@ import Colors from '../../util/colors'
 import Images from '../../Images'
 
 
-export default (props) => {
+export default ( { active, contact, onClick }) => {
+
 
 
   return (
 
-    <div className='contact-card'>
+    <div className = {`contact-card  ${active ? 'active' : ''}`} onClick={onClick}>
 
-      <img src={props.image} className='avatar'/>
+      <img src={contact.image} className='avatar'/>
 
 
       <div className='lines'>
@@ -22,7 +23,7 @@ export default (props) => {
         <div className="line">
 
           <div className="name">
-            {props.name}
+            {contact.name}
           </div>
 
           <div className="date">

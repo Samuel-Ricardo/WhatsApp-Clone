@@ -5,6 +5,10 @@
   --chat-hover-color: #F5F5F5;
 }
 
+.active {
+  background-color: #EBEBEB;
+}
+
 .contact-card {
 
   display: flex;
