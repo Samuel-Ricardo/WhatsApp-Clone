@@ -59,11 +59,12 @@ function App() {
 
           {contacts.map((contact, key) => (
 
-                <p>Pedro Contatos >:() </p>
+                <ChatlistItem key={key}/>
+
               ))
           }
 
-          Pedro Contatos ):()
+
         </div>
 
       </div>
