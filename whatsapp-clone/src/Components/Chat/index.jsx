@@ -1,16 +1,48 @@
 import React from 'react'
 import './Chat.css'
 
-export default (props) => {
+import SearchIcon from '@material-ui/icons/Search';
+import AttachFileIcon from '@material-ui/icons/AttachFile';
+import MoreVertIcon from '@material-ui/icons/MoreVert';
+
+import colors from '../../util/colors';
+
+export default ({contact}) => {
 
 
 
 
   return (
 
-    <div>
-      <img src={props.image} alt="" />
-      <p>{props.name}</p>
+    <div className='Chat'>
+
+      <header>
+        <div className="info">
+
+          <img className="perfil-image" src={contact.image}/>
+
+          <div className="name">
+            {contact.name}
+          </div>
+        </div>
+
+        <div className="button-group">
+
+          <div className="button">
+            <SearchIcon style={{color: colors.DEFAULT_BUTTON_COLOR}}/>
+          </div>
+
+          <div className="button">
+            <AttachFileIcon style={{color: colors.DEFAULT_BUTTON_COLOR}}/>
+          </div>
+
+          <div className="button">
+            <MoreVertIcon style={{color: colors.DEFAULT_BUTTON_COLOR}}/>
+          </div>
+
+        </div>
+      </header>
+
     </div>
 
   )

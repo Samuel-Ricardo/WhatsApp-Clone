@@ -99,8 +99,7 @@ function App() {
         {activeChat.id !== undefined &&
 
           <Chat
-            name={activeChat.name}
-            image={activeChat.image}
+            contact = {activeChat}
 
           />
         }
