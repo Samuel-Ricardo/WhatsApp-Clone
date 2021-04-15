@@ -20,7 +20,7 @@ export default () => {
         <div className="line">
 
           <div className="name">
-            Pedro Nomeações ):()
+            {props.name}
           </div>
 
           <div className="date">

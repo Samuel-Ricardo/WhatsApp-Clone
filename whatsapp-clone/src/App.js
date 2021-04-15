@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 
 
@@ -11,14 +11,22 @@ import SearchIcon from '@material-ui/icons/Search';
 import Search from '@material-ui/icons/Search';
 
 import ChatListItem from './Components/ChatListItem'
-import colors from './util/colors';
 import ChatIntro from './Components/ChatIntro';
+
+import colors from './util/colors';
+import Images from './Images'
 
 function App() {
 
   const [contacts, setContacts] = React.useState([{}, {}, {}, {},{}, {}, {}, {},{}, {}, {}, {},{}, {}, {}, {},{}, {}, {}, {},{}, {}, {}, {}])
 
-
+  const [activeChat, setActiveChat] = useState(
+    {
+      id: 1,
+      name: 'Pedro Nomeações ):()',
+      image: ''
+    }
+  )
 
 
   const buttonColor = colors.DEFAULT_BUTTON_COLOR

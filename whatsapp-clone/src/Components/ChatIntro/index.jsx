@@ -10,7 +10,7 @@ export default () => {
 
     <div className='intro--view'>
 
-      <h1> Seja Bem Vindo ao Whatsapp 2</h1>
+      <h1> Seja Bem Vindo ao Whatsapp 2 </h1>
 
         <img src={Image.GHOST} alt="ghost" className='intro--image'/>
 
