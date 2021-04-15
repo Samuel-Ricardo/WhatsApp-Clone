@@ -8,11 +8,11 @@ export default () => {
 
   return (
 
-    <div>
+    <div className='intro--view'>
 
-      <h1> Seja Bem Vindo </h1>
+      <h1> Seja Bem Vindo ao Whatsapp 2</h1>
 
-        <img src={Image.GHOST} alt="ghost"/>
+        <img src={Image.GHOST} alt="ghost" className='intro--image'/>
 
       <h2> Este clone do whatssap vai além do visual, teste o chat, inicie uma conversa com algum usuário </h2>
 

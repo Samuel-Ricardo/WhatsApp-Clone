@@ -35,9 +35,15 @@ body {
 
   width: 35%;
   max-width: 415px;
+  min-width: 315px;
+
   display: flex;
   flex-direction: column;
   border-right: 1px solid var(--sidebar-border-color);
+}
+
+.content-area {
+  flex:1;
 }
 
 header {
