@@ -31,8 +31,8 @@ export default () => {
 
         <div className="line">
 
-          <div className="lastMenssage">
-            Pedro mensagens >-()
+          <div className="lastMessage">
+            <p>Pedro mensagens >-()</p>
           </div>
 
         </div>
