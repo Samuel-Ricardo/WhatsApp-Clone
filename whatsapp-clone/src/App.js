@@ -12,7 +12,7 @@ import ChatListItem from './Components/ChatListItem'
 
 function App() {
 
-  const [contacts, setContacts] = React.useState([{}, {}, {}, {}])
+  const [contacts, setContacts] = React.useState([{}, {}, {}, {},{}, {}, {}, {},{}, {}, {}, {},{}, {}, {}, {},{}, {}, {}, {},{}, {}, {}, {}])
 
 
   const buttonColor = '#919191'
@@ -57,7 +57,7 @@ function App() {
 
         </div>
 
-        <div className='chat-list'>
+        <div className='chatlist'>
 
           {contacts.map((contact, key) => (
 

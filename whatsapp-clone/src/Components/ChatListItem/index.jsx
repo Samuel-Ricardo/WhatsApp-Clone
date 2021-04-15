@@ -13,7 +13,7 @@ export default () => {
 
     <div className='contact-card'>
 
-      <AccountCircleIcon className='avatar' color={Colors.DEFAULT_BUTTON_COLOR} />
+      <AccountCircleIcon className='avatar' style={{color: Colors.DEFAULT_BUTTON_COLOR }} />
 
       <div className='lines'>
 
@@ -32,14 +32,12 @@ export default () => {
         <div className="line">
 
           <div className="lastMessage">
-            <p>Pedro mensagens >-()</p>
+            <p>Pedro falácias >-()</p>
           </div>
 
         </div>
 
       </div>
-
-      Pedro Contatos ):()
 
     </div>
   )

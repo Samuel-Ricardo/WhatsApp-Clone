@@ -2,6 +2,7 @@
 :root {
 
   --chat-border-color: #EEE;
+  --chat-hover-color: #F5F5F5;
 }
 
 .contact-card {
@@ -10,6 +11,12 @@
   cursor: pointer;
   align-items: center;
   height: 70px;
+
+}
+
+.contact-card:hover {
+
+  background-color: var(--chat-hover-color);
 }
 
 .contact-card .avatar {
@@ -33,6 +40,11 @@
   padding-right: 15px;
   margin-left: 15px;
 
+  height: 100%;
+
+  flex-wrap: wrap;
+  min-width: 0;
+
 }
 
 .contact-card .lines .line {
@@ -45,14 +57,14 @@
 
 .contact-card .lines .line .name {
 
-  font-size: 17px;
+  font-size: 16px;
   color: #000;
 
 }
 
 .contact-card .lines .line .date{
 
-  font-size: 12px;
+  font-size: 10px;
   color:#999;
 
 }
@@ -63,4 +75,13 @@
   color: #999;
   display: flex;
   width: 100%;
+}
+
+.contact-card .lines .line .lastMessage p {
+
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin: 0;
+
 }
