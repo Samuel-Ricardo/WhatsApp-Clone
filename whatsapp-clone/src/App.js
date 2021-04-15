@@ -15,6 +15,7 @@ import ChatIntro from './Components/ChatIntro';
 
 import colors from './util/colors';
 import Images from './Images'
+import Chat from './Components/Chat';
 
 function App() {
 
@@ -90,7 +91,15 @@ function App() {
 
       <div className='content-area'>
 
-        <ChatIntro />
+        {activeChat.id !== undefined &&
+
+          <Chat name={activeChat.name} image={activeChat.image}/>
+        }
+
+        {activeChat.id === undefined &&
+
+          <ChatIntro />
+        }
 
       </div>
 
