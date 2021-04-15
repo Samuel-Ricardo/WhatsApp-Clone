@@ -1,4 +1,4 @@
-import React from 'reat'
+import React from 'react'
 import './ChatIntro.css'
 
 export default () => {
@@ -6,13 +6,14 @@ export default () => {
   return (
 
     <div>
-      ...pedro conteudos ):-()
 
-mantenha seu celular conectado
+      <h1>Seja Bem Vindo </h1>
 
-o whatsapp conecta ao seu telefone para sincronizar suas mensagens. Para reduzir o uso de dados, conecte seu telefone a uma rede wifi
+      <h2>Este clone do whatssap vai além do visual, teste o chat, inicie uma conversa com algum usuário </h2>
 
 
+
+      <h5>...pedro conteudos ):-()</h5>
     </div>
   )
 }

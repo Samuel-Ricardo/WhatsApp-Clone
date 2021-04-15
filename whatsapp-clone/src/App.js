@@ -12,6 +12,7 @@ import Search from '@material-ui/icons/Search';
 
 import ChatListItem from './Components/ChatListItem'
 import colors from './util/colors';
+import ChatIntro from './Components/ChatIntro';
 
 function App() {
 
@@ -77,7 +78,8 @@ function App() {
       </div>
 
       <div className='content-area'>
-        
+
+        <ChatIntro />
 
       </div>
 
