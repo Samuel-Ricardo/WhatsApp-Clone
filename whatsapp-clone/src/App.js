@@ -1,6 +1,8 @@
 import React from 'react';
 import './App.css';
 
+
+
 import DonutLargeIcon from '@material-ui/icons/DonutLarge';
 import ChatIcon from '@material-ui/icons/Chat';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
@@ -9,13 +11,16 @@ import SearchIcon from '@material-ui/icons/Search';
 import Search from '@material-ui/icons/Search';
 
 import ChatListItem from './Components/ChatListItem'
+import colors from './util/colors';
 
 function App() {
 
   const [contacts, setContacts] = React.useState([{}, {}, {}, {},{}, {}, {}, {},{}, {}, {}, {},{}, {}, {}, {},{}, {}, {}, {},{}, {}, {}, {}])
 
 
-  const buttonColor = '#919191'
+
+
+  const buttonColor = colors.DEFAULT_BUTTON_COLOR
 
   return (
 
@@ -73,6 +78,10 @@ function App() {
 
       <div className='content-area'>
         ...pedro conteudos ):-()
+
+        mantenha seu celular conectado
+
+        o whatsapp conecta ao seu telefone para sincronizar suas mensagens. Para reduzir o uso de dados, conecte seu telefone a uma rede wifi
       </div>
 
     </div>

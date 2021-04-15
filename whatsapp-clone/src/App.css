@@ -53,8 +53,8 @@ header {
 
 header .img-perfil {
 
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
   border-radius: 20px;
   cursor: pointer;
 }
@@ -121,4 +121,15 @@ header .button-group .button {
   background-color: #FFF;
   overflow-y: auto;
 
+}
+
+.chatlist::-webkit-scrollbar {
+
+  width: 6px;
+  height: 6px;
+}
+
+.chatlist::-webkit-scrollbar-thumb {
+
+  background-color: rgba(0, 0, 0, 0.2);
 }
