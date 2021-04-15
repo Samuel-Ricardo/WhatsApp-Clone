@@ -4,7 +4,7 @@ import './ChatListItem.css'
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 
 import Colors from '../../util/colors'
-
+import Images from '../../Images'
 
 
 export default (props) => {
@@ -14,8 +14,8 @@ export default (props) => {
 
     <div className='contact-card'>
 
-      <img src={} className='avatar'/>
-      <AccountCircleIcon className='avatar' style={{color: Colors.DEFAULT_BUTTON_COLOR }} />
+      <img src={props.image} className='avatar'/>
+
 
       <div className='lines'>
 

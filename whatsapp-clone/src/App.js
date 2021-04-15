@@ -18,15 +18,18 @@ import Images from './Images'
 
 function App() {
 
-  const [contacts, setContacts] = React.useState([{}, {}, {}, {},{}, {}, {}, {},{}, {}, {}, {},{}, {}, {}, {},{}, {}, {}, {},{}, {}, {}, {}])
+  const avatar = Images.USER
 
-  const [activeChat, setActiveChat] = useState(
-    {
-      id: 1,
-      name: 'Pedro Nomeações ):()',
-      image: ''
-    }
-  )
+  const [contacts, setContacts] = React.useState([
+
+    { id: 1, name: 'Pedro Nomeações ):()', image: avatar },
+    { id: 2, name: 'Pedro Nomeações ):() 2', image: avatar },
+    { id: 3, name: 'Pedro Nomeações ):() 3', image: avatar },
+    { id: 4, name: 'Pedro Nomeações ):( ) 4', image: avatar }
+
+  ])
+
+  const [activeChat, setActiveChat] = useState( {} )
 
 
   const buttonColor = colors.DEFAULT_BUTTON_COLOR
@@ -75,7 +78,7 @@ function App() {
 
           {contacts.map((contact, key) => (
 
-                <ChatListItem key={key}/>
+            <ChatListItem key={key} name={contact.name} image={contact.image}/>
 
               ))
           }
