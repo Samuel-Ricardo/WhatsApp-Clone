@@ -8,6 +8,8 @@ import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import SearchIcon from '@material-ui/icons/Search';
 import Search from '@material-ui/icons/Search';
 
+import ChatListItem from './Components/ChatListItem'
+
 function App() {
 
   const [contacts, setContacts] = React.useState([{}, {}, {}, {}])
@@ -59,7 +61,7 @@ function App() {
 
           {contacts.map((contact, key) => (
 
-                <ChatlistItem key={key}/>
+                <ChatListItem key={key}/>
 
               ))
           }
