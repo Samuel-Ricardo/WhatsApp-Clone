@@ -4,7 +4,7 @@
   --chat-border-color: #EEE;
 }
 
-.cotact-card {
+.contact-card {
 
   display: flex;
   cursor: pointer;
@@ -12,7 +12,7 @@
   height: 70px;
 }
 
-.cotact-card .avatar {
+.contact-card .avatar {
 
   width: 50px;
   height: 50px;
@@ -21,7 +21,7 @@
 
 }
 
-.cotact-card .lines {
+.contact-card .lines {
 
   flex: 1;
   display: flex;
@@ -35,7 +35,7 @@
 
 }
 
-.cotact-card .lines .line {
+.contact-card .lines .line {
 
   display: flex;
   justify-content: space-between;
@@ -43,21 +43,21 @@
   width: 100%;
 }
 
-.cotact-card .lines .line .name {
+.contact-card .lines .line .name {
 
   font-size: 17px;
   color: #000;
 
 }
 
-.cotact-card .lines .line .date{
+.contact-card .lines .line .date{
 
   font-size: 12px;
   color:#999;
 
 }
 
-.cotact-card .lines .line .lastMessage{
+.contact-card .lines .line .lastMessage{
 
   font-size: 14px;
   color: #999;

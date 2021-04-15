@@ -11,7 +11,7 @@ export default () => {
 
   return (
 
-    <div contact-card>
+    <div className='contact-card'>
 
       <AccountCircleIcon className='avatar' color={Colors.DEFAULT_BUTTON_COLOR} />
 
