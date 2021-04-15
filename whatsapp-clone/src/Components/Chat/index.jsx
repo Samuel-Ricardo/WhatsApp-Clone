@@ -14,7 +14,7 @@ export default ({contact}) => {
 
   return (
 
-    <div className='Chat'>
+    <div className='chat-window'>
 
       <header>
         <div className="info">
