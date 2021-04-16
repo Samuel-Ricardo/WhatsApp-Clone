@@ -9,12 +9,16 @@ import InsertEmoticonIcon from '@material-ui/icons/InsertEmoticon';
 import CloseIcon from '@material-ui/icons/Close';
 import SendIcon from '@material-ui/icons/Send';
 
+import EmojiPicker from 'emoji-picker-react'
+
 import colors from '../../util/colors';
 
 export default ({contact}) => {
 
 
-
+  function handleEmojiClick() {
+  
+}
 
   return (
 
@@ -50,6 +54,13 @@ export default ({contact}) => {
       <div className="chat-body">
 
       </div>
+
+      <section className="emoji-area">
+        <EmojiPicker
+
+          onEmojiClick={() => handleEmojiClick()}
+        />
+      </section>
 
       <footer className="chat-input">
 
