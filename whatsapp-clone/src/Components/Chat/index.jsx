@@ -37,8 +37,8 @@ export default ({contact}) => {
           </div>
 
           <div className="button">
-            <AttachFileIcon style={{color: colors.DEFAULT_BUTTON_COLOR}}/>
-          </div>
+              <AttachFileIcon style={{color: colors.DEFAULT_BUTTON_COLOR}}/>
+            </div>
 
           <div className="button">
             <MoreVertIcon style={{color: colors.DEFAULT_BUTTON_COLOR}}/>
@@ -58,6 +58,10 @@ export default ({contact}) => {
           <div className="button-group">
 
             <div className="button">
+              <CloseIcon style={{color: colors.DEFAULT_BUTTON_COLOR}}/>
+            </div>
+
+            <div className="button">
               <InsertEmoticonIcon style={{color: colors.DEFAULT_BUTTON_COLOR}}/>
             </div>
 
@@ -67,9 +71,11 @@ export default ({contact}) => {
 
         <div className="center">
 
+          <input type='search' placeHolder='Pedro Digitações >:[]'/>
+
         </div>
 
-        <div className="rigth">
+        <div className="right">
 
           <div className="button-group">
 
@@ -78,7 +84,7 @@ export default ({contact}) => {
             </div>
 
           </div>
-          
+
         </div>
 
 
