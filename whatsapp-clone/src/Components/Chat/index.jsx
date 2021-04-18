@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState, useEffects} from 'react'
 import './Chat.css'
 
 import SearchIcon from '@material-ui/icons/Search';
@@ -16,8 +16,8 @@ import colors from '../../util/colors';
 export default ({contact}) => {
 
 
-  function handleEmojiClick() {
-  
+  const handleEmojiClick = () => {
+
 }
 
   return (
@@ -58,7 +58,7 @@ export default ({contact}) => {
       <section className="emoji-area">
         <EmojiPicker
 
-          onEmojiClick={() => handleEmojiClick()}
+          onEmojiClick={handleEmojiClick}
         />
       </section>
 
