@@ -106,6 +106,10 @@
   display: flex;
   align-items: center;
 
+
+
+  width: 100%;
+
   background-color: #f0f0f0;
 }
 
@@ -124,6 +128,8 @@
 
   border: 0;
   outline: 0;
+
+  padding-right: 10px;
 
   background-color: #FFF;
   border-radius: 20px;

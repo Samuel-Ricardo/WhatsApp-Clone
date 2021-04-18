@@ -7,7 +7,9 @@ import MoreVertIcon from '@material-ui/icons/MoreVert';
 
 import InsertEmoticonIcon from '@material-ui/icons/InsertEmoticon';
 import CloseIcon from '@material-ui/icons/Close';
+
 import SendIcon from '@material-ui/icons/Send';
+import MicIcon from '@material-ui/icons/Mic';
 
 import EmojiPicker from 'emoji-picker-react'
 
@@ -15,7 +17,9 @@ import colors from '../../util/colors';
 
 export default ({contact}) => {
 
-  const [isEmojiOpen, setEmojiOpen] = useState(false)
+  const [isEmojiOpen, setEmojiOpen] = useState(false);
+  const [text, setText] = useState("");
+
 
   const openEmoji = () => {
 
@@ -27,7 +31,18 @@ export default ({contact}) => {
     setEmojiOpen(false)
   }
 
-  const handleEmojiClick = () => {
+
+  const handleEmojiClick = (event, objEmoji) => {
+
+    setText(''+text + objEmoji.emoji)
+  }
+
+
+  const handleSendMessage = () => {
+
+  }
+
+  const handleSendAudio = () => {
 
   }
 
@@ -80,7 +95,7 @@ export default ({contact}) => {
 
         <div className="left">
 
-          <div className="button-group">
+          <div className="button-group" style={{width: isEmojiOpen ? 80 : 40}}>
 
             <div className="button"
 
@@ -115,7 +130,12 @@ export default ({contact}) => {
 
         <div className="center">
 
-          <input type='search' placeHolder='Pedro Digitações >:[]'/>
+          <input
+            type='search'
+            placeHolder='Pedro Digitações >:[]'
+            value={text}
+            onChange={ typed => setText(typed.target.value)}
+            />
 
         </div>
 
@@ -123,9 +143,22 @@ export default ({contact}) => {
 
           <div className="button-group">
 
-            <div className="button">
-              <SendIcon style={{color: colors.DEFAULT_BUTTON_COLOR}}/>
-            </div>
+            {
+
+            text !== ''
+
+              ?
+
+                <div className="button" onClick={handleSendMessage}>
+                  <SendIcon style={{color: colors.DEFAULT_BUTTON_COLOR}}/>
+                </div>
+
+              :
+
+                <div className="button" onClick={handleSendAudio}>
+                  <MicIcon style={{color: colors.DEFAULT_BUTTON_COLOR}}/>
+                </div>
+            }
 
           </div>
 
