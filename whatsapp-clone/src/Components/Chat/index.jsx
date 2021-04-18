@@ -15,10 +15,21 @@ import colors from '../../util/colors';
 
 export default ({contact}) => {
 
+  const [isEmojiOpen, setEmojiOpen] = useState(false)
+
+  const openEmoji = () => {
+
+    setEmojiOpen(true)
+  }
+
+  const closeEmoji = () => {
+
+    setEmojiOpen(false)
+  }
 
   const handleEmojiClick = () => {
 
-}
+  }
 
   return (
 
@@ -55,7 +66,10 @@ export default ({contact}) => {
 
       </div>
 
-      <section className="emoji-area">
+      <section className="emoji-area"
+        style={{height: isEmojiOpen ? '250px' : '0px'}}
+      >
+
         <EmojiPicker
 
           onEmojiClick={handleEmojiClick}
@@ -68,12 +82,31 @@ export default ({contact}) => {
 
           <div className="button-group">
 
-            <div className="button">
-              <CloseIcon style={{color: colors.DEFAULT_BUTTON_COLOR}}/>
+            <div className="button"
+
+              onClick={closeEmoji}
+            >
+              <CloseIcon
+                style={
+                  {
+                    color: colors.DEFAULT_BUTTON_COLOR,
+                    width: isEmojiOpen ? 40 : 0
+                  }
+                }/>
+
             </div>
 
-            <div className="button">
-              <InsertEmoticonIcon style={{color: colors.DEFAULT_BUTTON_COLOR}}/>
+            <div className="button"
+
+              onClick={openEmoji}
+            >
+              <InsertEmoticonIcon
+              style={
+                  {
+                    color: isEmojiOpen ? '#009688' : colors.DEFAULT_BUTTON_COLOR,
+                    marginLeft: isEmojiOpen ? 0 : -40
+                  }
+                }/>
             </div>
 
           </div>
