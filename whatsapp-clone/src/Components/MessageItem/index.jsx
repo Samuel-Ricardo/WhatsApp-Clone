@@ -16,7 +16,7 @@ export default ({message, key}) => {
         </div>
 
         <div className="message-data">
-          {message.data}
+          {message.date}
         </div>
 
       </div>

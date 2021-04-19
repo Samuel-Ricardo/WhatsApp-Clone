@@ -9,9 +9,12 @@
   background-color: #FFF;
   border-radius: 10px;
   box-shadow: 0 2px 2px #CCC;
+
   display: flex;
   flex-direction: column;
   padding: 5px;
+
+  max-width: 90%;
 }
 
 .message-item .message .text {

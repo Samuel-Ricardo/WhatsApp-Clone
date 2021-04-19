@@ -26,7 +26,7 @@ export default ({contact}) => {
   const [messageList, setMessageList] = useState(
     [
       {text: 'Pedro Comunicações Textuais >()', date: '00:00'},
-      {text: 'Pedro Comunicações Textuais >()', date: '00:00'},
+      {text: 'Pedro Comunicações Textuais deseja se comunicar com vossa ppessoa >() || Pedro Comunicações Textuais deseja se comunicar com vossa ppessoa >() || Pedro Comunicações Textuais deseja se comunicar com vossa ppessoa >() || Pedro Comunicações Textuais deseja se comunicar com vossa ppessoa >() || ', date: '00:00'},
       {text: 'Pedro Comunicações Textuais >()', date: '00:00'},
       {text: 'Pedro Comunicações Textuais >()', date: '00:00'},
     ]);
