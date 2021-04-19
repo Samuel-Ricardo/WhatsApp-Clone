@@ -22,6 +22,7 @@ body {
   background-color: var(--body-background);
   margin: 0;
   font-family: 'Segoe UI', Helvetica Nue, Helvetica, Lucida Grande, Arial;
+
 }
 
 .app-window {
@@ -44,6 +45,7 @@ body {
 
 .content-area {
   flex:1;
+  overflow:hidden;
 }
 
 header {

@@ -26,7 +26,17 @@ export default ({contact, user}) => {
   const [messageList, setMessageList] = useState(
     [
       {author: contact, text: 'Pedro Comunicações Textuais >()', date: '00:00'},
-      {author: contact, text: 'Pedro Comunicações Textuais deseja se comunicar com vossa ppessoa >() || Pedro Comunicações Textuais deseja se comunicar com vossa ppessoa >() || Pedro Comunicações Textuais deseja se comunicar com vossa ppessoa >() || Pedro Comunicações Textuais deseja se comunicar com vossa ppessoa >() || ', date: '00:00'},
+      {author: contact, text: ' || Pedro Comunicações Textuais deseja se comunicar com vossa ppessoa >() ||  ', date: '00:00'},
+      {author: user, text: 'Pedro Comunicações Textuais >()', date: '00:00'},
+      {author: user, text: 'Pedro Comunicações Textuais >() o que deseja comunicar?', date: '00:00'},
+
+      {author: contact, text: 'Pedro Comunicações Textuais >()', date: '00:00'},
+      {author: contact, text: '|| Pedro Comunicações Textuais deseja se comunicar com vossa ppessoa >() ||  ', date: '00:00'},
+      {author: user, text: 'Pedro Comunicações Textuais >()', date: '00:00'},
+      {author: user, text: 'Pedro Comunicações Textuais >() o que deseja comunicar?', date: '00:00'},
+
+      {author: contact, text: 'Pedro Comunicações Textuais >()', date: '00:00'},
+      {author: contact, text: ' || Pedro Comunicações Textuais deseja se comunicar com vossa ppessoa >() ||  ', date: '00:00'},
       {author: user, text: 'Pedro Comunicações Textuais >()', date: '00:00'},
       {author: user, text: 'Pedro Comunicações Textuais >() o que deseja comunicar?', date: '00:00'},
     ]);
