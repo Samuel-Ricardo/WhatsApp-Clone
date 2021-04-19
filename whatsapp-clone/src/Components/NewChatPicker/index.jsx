@@ -20,7 +20,7 @@ export default ({contacts, user, isShowing, setShowing}) => {
 
           <div clasName="button">
 
-            <ArrowBackIcon style={color: colors.DEFAULT_BUTTON_COLOR}/>
+            <ArrowBackIcon style={{color: colors.DEFAULT_BUTTON_COLOR}}/>
 
           </div>
 
