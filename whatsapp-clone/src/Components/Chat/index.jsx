@@ -17,7 +17,7 @@ import MessageItem from '../MessageItem'
 
 import colors from '../../util/colors';
 
-export default ({contact}) => {
+export default ({contact, user}) => {
 
 
   const [isEmojiOpen, setEmojiOpen] = useState(false);
@@ -25,10 +25,10 @@ export default ({contact}) => {
   const [isListening, setListening] = useState(false);
   const [messageList, setMessageList] = useState(
     [
-      {text: 'Pedro Comunicações Textuais >()', date: '00:00'},
-      {text: 'Pedro Comunicações Textuais deseja se comunicar com vossa ppessoa >() || Pedro Comunicações Textuais deseja se comunicar com vossa ppessoa >() || Pedro Comunicações Textuais deseja se comunicar com vossa ppessoa >() || Pedro Comunicações Textuais deseja se comunicar com vossa ppessoa >() || ', date: '00:00'},
-      {text: 'Pedro Comunicações Textuais >()', date: '00:00'},
-      {text: 'Pedro Comunicações Textuais >()', date: '00:00'},
+      {author: contact, text: 'Pedro Comunicações Textuais >()', date: '00:00'},
+      {author: contact, text: 'Pedro Comunicações Textuais deseja se comunicar com vossa ppessoa >() || Pedro Comunicações Textuais deseja se comunicar com vossa ppessoa >() || Pedro Comunicações Textuais deseja se comunicar com vossa ppessoa >() || Pedro Comunicações Textuais deseja se comunicar com vossa ppessoa >() || ', date: '00:00'},
+      {author: user, text: 'Pedro Comunicações Textuais >()', date: '00:00'},
+      {author: user, text: 'Pedro Comunicações Textuais >() o que deseja comunicar?', date: '00:00'},
     ]);
 
 
@@ -124,6 +124,7 @@ export default ({contact}) => {
       <div className="chat-body">
         {messageList.map((message, key) => (
           <MessageItem
+            user={user}
             message={message}
             key={key}
           />

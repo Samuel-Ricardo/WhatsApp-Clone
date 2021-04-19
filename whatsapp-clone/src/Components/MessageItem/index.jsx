@@ -1,13 +1,27 @@
 import React from 'react'
 import './MessageItem.css'
 
-export default ({message, key}) => {
+export default ({user, message, key}) => {
 
 
   return (
 
-    <div className="message-line">
-      <div className="message-item">
+    <div className="message-line"
+
+      style={
+        {
+          justifyContent: user.id === message.author.id ? 'flex-end' : 'flex-start'
+        }
+      }
+    >
+      <div className="message-item"
+
+      style={
+        {
+          backgroundColor: user.id === message.author.id ? '#DCF8C6' : 'flex-start'
+        }
+      }
+      >
 
         <div className="message">
           <p className="text">

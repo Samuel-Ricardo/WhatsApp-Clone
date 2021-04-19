@@ -23,12 +23,16 @@ function App() {
 
   const [contacts, setContacts] = React.useState([
 
-    { id: 1, name: 'Pedro Nomeações ):()', image: avatar },
+    { id: 1, name: 'Pedro Comunicações Textuais ):()', image: avatar },
     { id: 2, name: 'Pedro Nomeações ):() 2', image: avatar },
     { id: 3, name: 'Pedro Nomeações ):() 3', image: avatar },
     { id: 4, name: 'Pedro Nomeações ):( ) 4', image: avatar }
 
   ])
+
+  const [user, setUser] = React.useState(
+    { id: 10, name: ' Pedro Usador >-:() ', image: avatar }
+  )
 
   const [activeChat, setActiveChat] = useState( {} )
 
@@ -99,8 +103,8 @@ function App() {
         {activeChat.id !== undefined &&
 
           <Chat
-            contact = {activeChat}
-
+            contact={activeChat}
+            user={user}
           />
         }
 
