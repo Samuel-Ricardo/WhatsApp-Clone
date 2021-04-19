@@ -21,6 +21,7 @@ export default ({contact}) => {
   const [isEmojiOpen, setEmojiOpen] = useState(false);
   const [text, setText] = useState("");
   const [isListening, setListening] = useState(false);
+  const [list, setList] = useState([]);
 
 
   let recognition = null
