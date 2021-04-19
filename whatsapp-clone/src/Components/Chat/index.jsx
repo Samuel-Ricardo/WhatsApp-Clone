@@ -1,4 +1,4 @@
-import React, {useState, useEffects} from 'react'
+import React, {useState, useEffect, useRef} from 'react'
 import './Chat.css'
 
 import SearchIcon from '@material-ui/icons/Search';
@@ -38,9 +38,11 @@ export default ({contact, user}) => {
       {author: contact, text: 'Pedro Comunicações Textuais >()', date: '00:00'},
       {author: contact, text: ' || Pedro Comunicações Textuais deseja se comunicar com vossa ppessoa >() ||  ', date: '00:00'},
       {author: user, text: 'Pedro Comunicações Textuais >()', date: '00:00'},
-      {author: user, text: 'Pedro Comunicações Textuais >() o que deseja comunicar?', date: '00:00'},
+      {author: user, text: 'Pedro Comunicações Textuais >() o que deseja comunicar?', date: '00:00'}
     ]);
 
+
+  const body = useRef();
 
   let recognition = null
   let SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition
@@ -50,6 +52,14 @@ export default ({contact, user}) => {
     recognition = new SpeechRecognition()
   }
 
+  useEffect(() => {
+
+    if (body.current.scrollHeight > body.current.offsetHeight) {
+
+      body.current.scrollTop = body.current.scrollHeight - body.current.offsetHeight
+    }
+
+  },[messageList])
 
 
   const openEmoji = () => {
@@ -131,7 +141,7 @@ export default ({contact, user}) => {
         </div>
       </header>
 
-      <div className="chat-body">
+      <div ref={body} className="chat-body">
         {messageList.map((message, key) => (
           <MessageItem
             user={user}
