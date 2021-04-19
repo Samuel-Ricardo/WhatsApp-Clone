@@ -17,6 +17,8 @@ import colors from './util/colors';
 import Images from './Images'
 import Chat from './Components/Chat';
 
+import NewChatPicker from './Components/NewChatPicker'
+
 function App() {
 
   const avatar = Images.USER
