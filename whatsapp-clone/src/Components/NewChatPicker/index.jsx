@@ -1,5 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './NewChatPicker.css'
+
+import ArrowBackIcon from '@material-ui/icons/ArrowBack';
+import colors from '../../util/colors';
+
+
 
 export default ({contacts, user, isShowing, setShowing}) => {
 
@@ -14,6 +19,8 @@ export default ({contacts, user, isShowing, setShowing}) => {
         <div clasName="button-group">
 
           <div clasName="button">
+
+            <ArrowBackIcon style={color: colors.DEFAULT_BUTTON_COLOR}/>
 
           </div>
 
