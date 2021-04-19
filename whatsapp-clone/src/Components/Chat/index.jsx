@@ -17,8 +17,20 @@ import colors from '../../util/colors';
 
 export default ({contact}) => {
 
+
   const [isEmojiOpen, setEmojiOpen] = useState(false);
   const [text, setText] = useState("");
+  const [isListening, setListening] = useState(false);
+
+
+  let recognition = null
+  let SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition
+
+  if(SpeechRecognition !== undefined) {
+
+    recognition = new SpeechRecognition()
+  }
+
 
 
   const openEmoji = () => {
@@ -42,7 +54,30 @@ export default ({contact}) => {
 
   }
 
-  const handleSendAudio = () => {
+  const handleMicClick = () => {
+
+
+    if(recognition !== null) {
+
+      recognition.onstart = () => {
+        setListening(true)
+      }
+
+      recognition.onend = () => {
+        setListening(false)
+      }
+
+      recognition.onresult = (event) => {
+
+
+
+        setText(text+' '+ event.result[0][0].transcript)
+      }
+
+
+      recognition.start()
+
+    }
 
   }
 
@@ -132,7 +167,7 @@ export default ({contact}) => {
 
           <input
             type='search'
-            placeHolder='Pedro Digitações >:[]'
+            placeholder='Pedro Digitações >:[]'
             value={text}
             onChange={ typed => setText(typed.target.value)}
             />
@@ -155,8 +190,8 @@ export default ({contact}) => {
 
               :
 
-                <div className="button" onClick={handleSendAudio}>
-                  <MicIcon style={{color: colors.DEFAULT_BUTTON_COLOR}}/>
+                <div className="button" onClick={handleMicClick}>
+                  <MicIcon style={{color: isListening ? '#126ECE' : colors.DEFAULT_BUTTON_COLOR}}/>
                 </div>
             }
 
