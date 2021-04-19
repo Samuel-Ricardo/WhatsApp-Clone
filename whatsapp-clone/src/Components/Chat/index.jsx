@@ -11,7 +11,9 @@ import CloseIcon from '@material-ui/icons/Close';
 import SendIcon from '@material-ui/icons/Send';
 import MicIcon from '@material-ui/icons/Mic';
 
-import EmojiPicker from 'emoji-picker-react'
+import EmojiPicker from 'emoji-picker-react';
+
+import MessageItem from '../MessageItem'
 
 import colors from '../../util/colors';
 
@@ -21,7 +23,13 @@ export default ({contact}) => {
   const [isEmojiOpen, setEmojiOpen] = useState(false);
   const [text, setText] = useState("");
   const [isListening, setListening] = useState(false);
-  const [list, setList] = useState([]);
+  const [messageList, setMessageList] = useState(
+    [
+      {text: 'Pedro Comunicações Textuais >()', date: '00:00'},
+      {text: 'Pedro Comunicações Textuais >()', date: '00:00'},
+      {text: 'Pedro Comunicações Textuais >()', date: '00:00'},
+      {text: 'Pedro Comunicações Textuais >()', date: '00:00'},
+    ]);
 
 
   let recognition = null
@@ -114,7 +122,12 @@ export default ({contact}) => {
       </header>
 
       <div className="chat-body">
-
+        {messageList.map((message, key) => (
+          <MessageItem
+            message={message}
+            key={key}
+          />
+        ))}
       </div>
 
       <section className="emoji-area"
