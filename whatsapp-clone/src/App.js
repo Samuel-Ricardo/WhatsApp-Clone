@@ -36,14 +36,30 @@ function App() {
 
   const [activeChat, setActiveChat] = useState( {} )
 
+  const [isShowingNewChat, setIsShowingNewChat] = useState(false)
 
   const buttonColor = colors.DEFAULT_BUTTON_COLOR
+
+
+  const handleNewChat = () => {
+
+    setIsShowingNewChat(true)
+  }
 
   return (
 
     <div className='app-window'>
 
       <div className='sidebar'>
+
+        <NewChatPicker
+
+          contacts={contacts}
+          user={user}
+          isShowing={isShowingNewChat}
+          setShowing={setIsShowingNewChat}
+
+        />
 
         <header>
 
@@ -57,7 +73,7 @@ function App() {
               <DonutLargeIcon style={{color: buttonColor}}/>
             </div>
 
-            <div className='button'>
+            <div className='button' onClick={handleNewChat}>
               <ChatIcon style={{color: buttonColor}}/>
             </div>
 
