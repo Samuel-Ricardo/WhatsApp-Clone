@@ -8,3 +8,9 @@ export default {
   measurementId: "G-N8LSV7PKW8"
 };
 
+
+/*
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+*/
