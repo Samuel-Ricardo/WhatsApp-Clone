@@ -10,6 +10,8 @@
   display: flex;
   flex-direction: column;
   border-right: 1px solid #DDD;
+
+  transition: left ease 1.0s;
 }
 
 .NewChatPicker header {
@@ -24,11 +26,11 @@
 
 }
 
-.NewChatPicker header .button {
+.NewChatPicker header .button-group .button {
 
-  padding-left: 15px;
+  padding-left: 0px;
 
-  width: 100%;
+  cursor: pointer;
 
 }
 
