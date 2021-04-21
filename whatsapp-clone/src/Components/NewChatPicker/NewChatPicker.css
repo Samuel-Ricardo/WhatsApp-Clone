@@ -1,0 +1,45 @@
+.NewChatPicker {
+
+  width: 35%;
+  max-width: 415px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background-color: #FFF;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #DDD;
+}
+
+.NewChatPicker header {
+  display: flex;
+  background-color: #00BFA5;
+
+  align-items: center;
+  padding: 55px 10px 25px 15px;
+}
+
+.NewChatPicker header .button-group{
+
+}
+
+.NewChatPicker header .button {
+
+  padding-left: 15px;
+
+  width: 100%;
+
+}
+
+ .NewChatPicker header .title {
+
+  font-size: 19px;
+  height: 40px;
+  line-height: 0px;
+  flex: 1;
+  font-weight: bold;
+  color: #FFF;
+  margin-left: 30px;
+ }
+

@@ -20,15 +20,16 @@ export default ({contacts, user, isShowing, setShowing}) => {
 
           <div clasName="button">
 
-            <ArrowBackIcon style={{color: colors.DEFAULT_BUTTON_COLOR}}/>
+            <ArrowBackIcon style={{color: "#FFFFFF"}}/>
 
           </div>
-
+        </div>
+        
           <div className='title'>
             <p>Novo Chat</p>
           </div>
 
-        </div>
+
 
       </header>
 
