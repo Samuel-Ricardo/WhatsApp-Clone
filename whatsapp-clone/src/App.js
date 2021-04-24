@@ -19,6 +19,7 @@ import Chat from './Components/Chat';
 
 import NewChatPicker from './Components/NewChatPicker'
 import Login from './Components/Login';
+import API from './server/API';
 
 function App() {
 
@@ -57,7 +58,7 @@ function App() {
       avatar: user.photoURL
 
     };
-
+    await API.addUser(loggedUser)
     setUser(loggedUser);
 
   }
@@ -85,7 +86,9 @@ function App() {
         <header>
 
           <div >
-            <AccountCircleIcon className='img-perfil' style={{ color: buttonColor }}/>
+
+            <img src={user.avatar} className='img-perfil'/>
+
           </div>
 
           <div className='button-group'>
