@@ -3,9 +3,18 @@ import "./Login.css";
 
 import API from "../../server/API"
 
+export default ({ onReceive }) => {
 
+  const handleFacebookLogin = () => {
 
-export default () => {
+    let result = await API.facebookLoginPopup();
+
+    if (result) {
+      onReceive(result.user);
+    } else {
+      alert("Error!")
+    }
+  }
 
   return (
     <div className="login">

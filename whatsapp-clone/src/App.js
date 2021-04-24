@@ -64,7 +64,7 @@ function App() {
 
   if(user === null ) {
 
-    return <Login />
+    return <Login onReceive={ handleLoginData }/>
   }
 
   return (
