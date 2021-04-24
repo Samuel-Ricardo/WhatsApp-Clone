@@ -13,5 +13,13 @@ export default {
     let result = await firebase.auth().signInWithPopup(provider)
 
     return result;
+  },
+
+  addUser: async (user) => {
+    await database.collection("User").doc(user.id).set({
+
+      name: user.name,
+      avatar: user.avatar,
+    }, {merge: true})
   }
 }

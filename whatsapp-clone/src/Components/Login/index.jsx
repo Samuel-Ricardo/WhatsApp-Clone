@@ -5,7 +5,7 @@ import API from "../../server/API"
 
 export default ({ onReceive }) => {
 
-  const handleFacebookLogin = () => {
+  const handleFacebookLogin = async () => {
 
     let result = await API.facebookLoginPopup();
 
@@ -18,7 +18,7 @@ export default ({ onReceive }) => {
 
   return (
     <div className="login">
-      <button onClick={hancleFacebookLogin}> Login With Facebook </button>
+      <button onClick={handleFacebookLogin}> Login With Facebook </button>
     </div>
   )
 }
