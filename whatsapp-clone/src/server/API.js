@@ -27,7 +27,7 @@ export default {
 
     let list = []
 
-    let result = await database.collection("User").get()
+    let results = await database.collection("User").get()
 
     results.forEach(result => {
       let userData = result.data();
@@ -36,8 +36,8 @@ export default {
         list.push({
 
           id: result.id,
-          name: data.name,
-          avatar: data.avatar
+          name: userData.name,
+          avatar: userData.avatar
         });
       }
     })

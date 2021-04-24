@@ -9,13 +9,16 @@ import Images from '../../Images'
 
 export default ( { active, contact, onClick }) => {
 
+  let avatar =  contact.avatar
+
 
 
   return (
 
     <div className = {`contact-card  ${active ? 'active' : ''}`} onClick={onClick}>
 
-      <img src={contact.image} className='avatar'/>
+      <img
+        src={avatar === undefined || avatar === null ? Images.USER : avatar} className='avatar' />
 
 
       <div className='lines'>

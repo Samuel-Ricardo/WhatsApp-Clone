@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
 
 
@@ -25,14 +25,22 @@ function App() {
 
   const avatar = Images.USER
 
-  const [contacts, setContacts] = React.useState([
+  const [contacts, setContacts] = React.useState([])
 
-    { id: 1, name: 'Pedro Comunicações Textuais ):()', image: avatar },
-    { id: 2, name: 'Pedro Nomeações ):() 2', image: avatar },
-    { id: 3, name: 'Pedro Nomeações ):() 3', image: avatar },
-    { id: 4, name: 'Pedro Nomeações ):( ) 4', image: avatar }
+  useEffect(() => {
 
-  ])
+    const getContacts = async () => {
+
+      if (user !== null) {
+        let userContacts = await API.getContactList(user.id)
+
+        setContacts(userContacts)
+      }
+
+    }
+
+    getContacts()
+  }, contacts )
 
   const [user, setUser] = React.useState(null)
 
