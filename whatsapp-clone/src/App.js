@@ -48,7 +48,19 @@ function App() {
   }
 
 
-  
+  const handleLoginData = async (user) => {
+
+    let loggedUser = {
+
+      id: user.uid,
+      name: user.displayName,
+      avatar: user.photoURL
+
+    };
+
+    setUser(loggedUser);
+
+  }
 
   if(user === null ) {
 
