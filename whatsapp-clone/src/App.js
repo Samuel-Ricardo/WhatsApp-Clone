@@ -18,6 +18,7 @@ import Images from './Images'
 import Chat from './Components/Chat';
 
 import NewChatPicker from './Components/NewChatPicker'
+import Login from './Components/Login';
 
 function App() {
 
@@ -32,9 +33,7 @@ function App() {
 
   ])
 
-  const [user, setUser] = React.useState(
-    { id: 10, name: ' Pedro Usador >-:() ', image: avatar }
-  )
+  const [user, setUser] = React.useState(null)
 
   const [activeChat, setActiveChat] = useState( {} )
 
@@ -46,6 +45,14 @@ function App() {
   const handleNewChat = () => {
 
     setIsShowingNewChat(true)
+  }
+
+
+  
+
+  if(user === null ) {
+
+    return <Login />
   }
 
   return (

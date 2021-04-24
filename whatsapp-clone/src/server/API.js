@@ -8,8 +8,8 @@ const firebaseapp = firebase.initializeApp(firebase_config)
 const database = firebase.firestore()
 
 export default {
-  fbPopup: async () => {
-    const provider = new firebase.auth.GoogleAuthProvider();
+  facebookLoginPopup: async () => {
+    const provider = new firebase.auth.FacebookAuthProvider();
     let result = await firebase.auth().signInWithPopup(provider)
 
     return result;
