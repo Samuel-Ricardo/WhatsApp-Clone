@@ -21,5 +21,25 @@ export default {
       name: user.name,
       avatar: user.avatar,
     }, {merge: true})
+  },
+
+  getContactList: async (userId) => {
+
+    let list = []
+
+    let result = await database.collection("User").get()
+
+    results.forEach(result => {
+      let userData = result.data();
+
+      if (result.id !== userId) {
+        list.push({
+
+          id: result.id,
+          name: data.name,
+          avatar: data.avatar
+        });
+      }
+    })
   }
 }
