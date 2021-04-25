@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
 
-
-
 import DonutLargeIcon from '@material-ui/icons/DonutLarge';
 import ChatIcon from '@material-ui/icons/Chat';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
@@ -30,8 +28,17 @@ function App() {
       {id: 1, name: "Pedro Comunicações Textuais >:()", avatar: Images.USER, },
       {id: 2, name: "Pedro Nomeações >:()", avatar: Images.USER, },
       {id: 3, name: "Pedro Nomeações 2 >:()", avatar: Images.USER, },
-      {id: 4, name: "Pedro Nomeações >:()", avatar: Images.USER, },
+      {id: 4, name: "Pedro Nomeações >:()", avatar: Images.USER, }
     ])
+
+  const [user, setUser] = React.useState({id: 5, name: "Samuel", avatar: avatar})
+
+  const [activeChat, setActiveChat] = useState( {} )
+
+  const [isShowingNewChat, setIsShowingNewChat] = useState(false)
+
+  const buttonColor = colors.DEFAULT_BUTTON_COLOR
+
 
   useEffect(() => {
 
@@ -46,15 +53,7 @@ function App() {
     }
 
     getContacts()
-  }, [contacts] )
-
-  const [user, setUser] = React.useState(null)
-
-  const [activeChat, setActiveChat] = useState( {} )
-
-  const [isShowingNewChat, setIsShowingNewChat] = useState(false)
-
-  const buttonColor = colors.DEFAULT_BUTTON_COLOR
+  }, [user] )
 
 
   const handleNewChat = () => {

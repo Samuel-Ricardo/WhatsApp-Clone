@@ -32,14 +32,16 @@ export default {
     results.forEach(result => {
       let userData = result.data();
 
-      if (result.id !== userId) {
+      if (userData.id !== userId) {
         list.push({
 
-          id: result.id,
+          id: userData.id,
           name: userData.name,
           avatar: userData.avatar
         });
       }
     })
+
+    return list;
   }
 }
