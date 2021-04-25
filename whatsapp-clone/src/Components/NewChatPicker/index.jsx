@@ -1,14 +1,32 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './NewChatPicker.css'
 
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import colors from '../../util/colors';
+import Images from '../../Images';
+import API from '../../server/API';
 
 
 
 export default ({ contacts, user, isShowing, setShowing }) => {
 
-  const [contactList, setcontactList] = useState(contacts)
+  const [contactList, setContactList] = useState(contacts)
+
+  useEffect(() => {
+
+    const getContacts = async () => {
+
+      if (user !== null) {
+        let userContacts = await API.getContactList(user.id)
+
+        setContactList(userContacts)
+      }
+
+    }
+
+    getContacts()
+  }, [user] )
+
 
 
   const close = () => {
@@ -48,7 +66,7 @@ export default ({ contacts, user, isShowing, setShowing }) => {
 
           <div className="contact-card" key={key}>
 
-            <img className="avatar" src={item.avatar} />
+            <img className="avatar" src={item.avatar === undefined || item.avatar === null || item.avatar === "" ? Images.USER : item.avatar} />
 
             <div className="name">
               <p>{item.name}</p>

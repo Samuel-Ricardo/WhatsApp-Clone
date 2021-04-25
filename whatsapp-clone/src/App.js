@@ -31,29 +31,13 @@ function App() {
       {id: 4, name: "Pedro Nomeações >:()", avatar: Images.USER, }
     ])
 
-  const [user, setUser] = React.useState({id: 5, name: "Samuel", avatar: avatar})
+  const [user, setUser] = React.useState({ id: "A1kdtL17xaOPSd0M5BsGPva2ZrM2", name: "Samuel Cabral", avatar: "https://graph.facebook.com/107606601472801/picture" })
 
   const [activeChat, setActiveChat] = useState( {} )
 
   const [isShowingNewChat, setIsShowingNewChat] = useState(false)
 
   const buttonColor = colors.DEFAULT_BUTTON_COLOR
-
-
-  useEffect(() => {
-
-    const getContacts = async () => {
-
-      if (user !== null) {
-        let userContacts = await API.getContactList(user.id)
-
-        setContacts(userContacts)
-      }
-
-    }
-
-    getContacts()
-  }, [user] )
 
 
   const handleNewChat = () => {
