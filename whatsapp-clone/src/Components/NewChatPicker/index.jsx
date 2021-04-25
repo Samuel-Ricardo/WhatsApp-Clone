@@ -28,11 +28,13 @@ export default ({ contacts, user, isShowing, setShowing, setActiveChat }) => {
   }, [user] )
 
 
-  const addContact = (contact) => {
+  const createNewChat = async (contact) => {
+
+    API.newChat(user,contact)
 
     contacts.push(contact)
 
-    setActiveChat(contact)
+    await setActiveChat(contact)
 
     close()
 
@@ -73,7 +75,7 @@ export default ({ contacts, user, isShowing, setShowing, setActiveChat }) => {
 
         {contactList.map((item, key) => (
 
-          <div className="contact-card" key={key} onClick={() => addContact(item)}>
+          <div className="contact-card" key={key} onClick={() => createNewChat(item)}>
 
             <img className="avatar" src={item.avatar === undefined || item.avatar === null || item.avatar === "" ? Images.USER : item.avatar} />
 

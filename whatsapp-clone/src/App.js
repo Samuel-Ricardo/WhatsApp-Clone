@@ -25,8 +25,7 @@ function App() {
 
   const [contacts, setContacts] = React.useState(
     [
-      {id: 1, name: "Pedro Comunicações Textuais >:()", avatar: Images.USER, },
-      {id: 2, name: "Pedro Nomeações >:()", avatar: Images.USER, }
+      
     ])
 
   const [user, setUser] = React.useState({ id: "A1kdtL17xaOPSd0M5BsGPva2ZrM2", name: "Samuel Cabral", avatar: "https://graph.facebook.com/107606601472801/picture" })

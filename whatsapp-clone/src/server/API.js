@@ -47,14 +47,14 @@ export default {
 
   newChat: async (user, contact) => {
 
-    let newChat = await database.collection("chat").add({
+    let newChat = await database.collection("Chat").add({
 
       messages: [],
       users:[user.id, contact.id]
 
     });
 
-    database.collection("user").doc(user.id).update({
+    database.collection("User").doc(user.id).update({
       chats: firebase.firestore.FieldValue.arrayUnion({
         chatId: newChat.id,
         title: contact.name,
@@ -63,7 +63,7 @@ export default {
       })
     });
 
-    database.collection("user").doc(contact.id).update({
+    database.collection("User").doc(contact.id).update({
       chats: firebase.firestore.FieldValue.arrayUnion({
         chatId: newChat.id,
         title: user.name,
