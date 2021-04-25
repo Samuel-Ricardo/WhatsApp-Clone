@@ -117,7 +117,7 @@ export default ({contact, user}) => {
       <header>
         <div className="info">
 
-          <img className="perfil-image" src={contact.image}/>
+          <img className="perfil-image" src={contact.avatar}/>
 
           <div className="name">
             {contact.name}

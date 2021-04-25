@@ -25,7 +25,13 @@ function App() {
 
   const avatar = Images.USER
 
-  const [contacts, setContacts] = React.useState([])
+  const [contacts, setContacts] = React.useState(
+    [
+      {id: 1, name: "Pedro Comunicações Textuais >:()", avatar: Images.USER, },
+      {id: 2, name: "Pedro Nomeações >:()", avatar: Images.USER, },
+      {id: 3, name: "Pedro Nomeações 2 >:()", avatar: Images.USER, },
+      {id: 4, name: "Pedro Nomeações >:()", avatar: Images.USER, },
+    ])
 
   useEffect(() => {
 
@@ -40,7 +46,7 @@ function App() {
     }
 
     getContacts()
-  }, contacts )
+  }, [contacts] )
 
   const [user, setUser] = React.useState(null)
 

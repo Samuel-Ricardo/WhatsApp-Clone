@@ -48,7 +48,7 @@ export default ({ contacts, user, isShowing, setShowing }) => {
 
           <div className="contact-card" key={key}>
 
-            <img className="avatar" src={item.image} />
+            <img className="avatar" src={item.avatar} />
 
             <div className="name">
               <p>{item.name}</p>
