@@ -8,7 +8,7 @@ import API from '../../server/API';
 
 
 
-export default ({ contacts, user, isShowing, setShowing }) => {
+export default ({ contacts, user, isShowing, setShowing, setActiveChat }) => {
 
   const [contactList, setContactList] = useState(contacts)
 
@@ -28,6 +28,13 @@ export default ({ contacts, user, isShowing, setShowing }) => {
   }, [user] )
 
 
+  const addContact = (contact) => {
+
+    contacts.push(contact)
+
+    setActiveChat(contact)
+
+  }
 
   const close = () => {
 
@@ -64,7 +71,7 @@ export default ({ contacts, user, isShowing, setShowing }) => {
 
         {contactList.map((item, key) => (
 
-          <div className="contact-card" key={key}>
+          <div className="contact-card" key={key} onClick={() => addContact(item)}>
 
             <img className="avatar" src={item.avatar === undefined || item.avatar === null || item.avatar === "" ? Images.USER : item.avatar} />
 

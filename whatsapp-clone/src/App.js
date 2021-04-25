@@ -26,9 +26,7 @@ function App() {
   const [contacts, setContacts] = React.useState(
     [
       {id: 1, name: "Pedro Comunicações Textuais >:()", avatar: Images.USER, },
-      {id: 2, name: "Pedro Nomeações >:()", avatar: Images.USER, },
-      {id: 3, name: "Pedro Nomeações 2 >:()", avatar: Images.USER, },
-      {id: 4, name: "Pedro Nomeações >:()", avatar: Images.USER, }
+      {id: 2, name: "Pedro Nomeações >:()", avatar: Images.USER, }
     ])
 
   const [user, setUser] = React.useState({ id: "A1kdtL17xaOPSd0M5BsGPva2ZrM2", name: "Samuel Cabral", avatar: "https://graph.facebook.com/107606601472801/picture" })
@@ -77,6 +75,7 @@ function App() {
           user={user}
           isShowing={isShowingNewChat}
           setShowing={setIsShowingNewChat}
+          setActiveChat={setActiveChat}
 
         />
 
