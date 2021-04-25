@@ -34,6 +34,8 @@ export default ({ contacts, user, isShowing, setShowing, setActiveChat }) => {
 
     setActiveChat(contact)
 
+    close()
+
   }
 
   const close = () => {

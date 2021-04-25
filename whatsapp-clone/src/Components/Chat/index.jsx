@@ -16,6 +16,7 @@ import EmojiPicker from 'emoji-picker-react';
 import MessageItem from '../MessageItem'
 
 import colors from '../../util/colors';
+import Images from '../../Images';
 
 export default ({contact, user}) => {
 
@@ -117,7 +118,7 @@ export default ({contact, user}) => {
       <header>
         <div className="info">
 
-          <img className="perfil-image" src={contact.avatar}/>
+          <img className="perfil-image" src={contact.avatar === undefined || contact.avatar === null || contact.avatar === "" ? Images.USER : contact.avatar}/>
 
           <div className="name">
             {contact.name}
