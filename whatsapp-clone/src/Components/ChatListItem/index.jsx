@@ -18,7 +18,7 @@ export default ( { active, contact, onClick }) => {
     <div className = {`contact-card  ${active ? 'active' : ''}`} onClick={onClick}>
 
       <img
-        src={avatar === undefined || avatar === null ? Images.USER : avatar} className='avatar' />
+        src={avatar === undefined || avatar === null || avatar === "" ? Images.USER : avatar} className='avatar' />
 
 
       <div className='lines'>
