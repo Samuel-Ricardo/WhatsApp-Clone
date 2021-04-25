@@ -70,6 +70,18 @@ export default {
         image: user.avatar,
         with: [user.id]
       })
+    });
+  },
+
+  onChatList: (userId, setContacts) => {
+
+    return database.collection("User").doc(userId).onSnapshot((doc) => {
+      if(doc.exist) {
+        let userData = doc.data();
+        if (userData.chats) {
+          setContacts(userData.chats)
+        }
+      }
     })
 
   }
