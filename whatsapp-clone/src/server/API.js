@@ -76,9 +76,16 @@ export default {
   onChatList: (userId, setContacts) => {
 
     return database.collection("User").doc(userId).onSnapshot((doc) => {
-      if(doc.exist) {
+
+      if (doc.exists) {
         let userData = doc.data();
+
+        console.log("")
+          console.log(userData)
+        console.log("")
+
         if (userData.chats) {
+
           setContacts(userData.chats)
         }
       }

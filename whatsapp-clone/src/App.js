@@ -34,6 +34,19 @@ function App() {
   const buttonColor = colors.DEFAULT_BUTTON_COLOR
 
 
+
+  useEffect(() => {
+
+    if (user !== null) {
+      let unsub = API.onChatList(user.id, setContacts);
+          console.log("")
+          console.log(unsub)
+          console.log("")
+      return unsub
+    }
+  },[user])
+
+
   const handleNewChat = () => {
 
     setIsShowingNewChat(true)

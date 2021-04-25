@@ -9,7 +9,7 @@ import Images from '../../Images'
 
 export default ( { active, contact, onClick }) => {
 
-  let avatar =  contact.avatar
+  let image =  contact.image
 
 
 
@@ -18,7 +18,7 @@ export default ( { active, contact, onClick }) => {
     <div className = {`contact-card  ${active ? 'active' : ''}`} onClick={onClick}>
 
       <img
-        src={avatar === undefined || avatar === null || avatar === "" ? Images.USER : avatar} className='avatar' />
+        src={image === undefined || image === null || image === "" ? Images.USER : image} className='avatar' />
 
 
       <div className='lines'>
@@ -26,7 +26,7 @@ export default ( { active, contact, onClick }) => {
         <div className="line">
 
           <div className="name">
-            {contact.name}
+            {contact.title}
           </div>
 
           <div className="date">
