@@ -1,8 +1,26 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './MessageItem.css'
 
 export default ({user, message, key}) => {
 
+  const [date, setDate] = useState('')
+
+  useEffect(() => {
+
+    if (message.date > 0) {
+      let newDate = new Date(message.date.seconds * 1000)
+
+      let hours = newDate.getHours();
+      let minutes = newDate.getMinutes();
+
+      hours = hours < 10 ? "0" + hours : hours;
+      minutes = minutes < 10 ? "0" + minutes : minutes
+
+      setDate(`${hours}:${minutes}`)
+
+    }
+
+  },[message])
 
   return (
 
@@ -10,7 +28,7 @@ export default ({user, message, key}) => {
 
       style={
         {
-          justifyContent: user.id === message.author.id ? 'flex-end' : 'flex-start'
+          justifyContent: user.id === message.author ? 'flex-end' : 'flex-start'
         }
       }
     >
@@ -18,19 +36,19 @@ export default ({user, message, key}) => {
 
       style={
         {
-          backgroundColor: user.id === message.author.id ? '#DCF8C6' : 'flex-start'
+          backgroundColor: user.id === message.author ? '#DCF8C6' : 'flex-start'
         }
       }
       >
 
         <div className="message">
           <p className="text">
-            { message.text }
+            { message.body }
           </p>
         </div>
 
         <div className="message-data">
-          {message.date}
+          {date}
         </div>
 
       </div>

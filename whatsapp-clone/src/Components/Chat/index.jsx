@@ -100,6 +100,8 @@ export default ({chat, user}) => {
 
     if (text !== "") {
       API.sendMessage(chat, user.id, "text", text)
+      setText('')
+      setEmojiOpen(false)
     }
   }
 

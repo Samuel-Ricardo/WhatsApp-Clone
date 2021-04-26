@@ -131,19 +131,23 @@ export default {
     return database.collection('Chat').doc(chatId).onSnapshot(doc => {
       if (doc.exists) {
         let chatData = doc.data();
+        console.log(chatData)
         setMessageList(chatData.messages);
       }
 
     })
   },
 
-  sendMessage: (chatData, userId, type, text) => {
+  sendMessage: (chatData, userId, type, body) => {
 
     let now = new Date();
 
     database.collection("Chat").doc(chatData.chatId).update({
       messages: firebase.firestore.FieldValue.arrayUnion({
-
+        type,
+        author: userId,
+        body,
+        date: now
       })
     })
   }
