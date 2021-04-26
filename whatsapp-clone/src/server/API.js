@@ -117,10 +117,15 @@ export default {
 
         if (userData.chats) {
 
-          let chats = [...userdata.chats];
+          let chats = [...userData.chats];
 
           chats.sort((a,b) => {
             if (a.lastMessageDate === undefined) {
+
+              return -1;
+            }
+
+            if (b.lastMessageDate === undefined) {
 
               return -1;
             }
@@ -132,7 +137,7 @@ export default {
               return -1;
             }
           })
-          setContacts(chat)
+          setContacts(chats)
         }
       }
     })
