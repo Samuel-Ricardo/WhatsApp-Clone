@@ -17,6 +17,7 @@ import MessageItem from '../MessageItem'
 
 import colors from '../../util/colors';
 import Images from '../../Images';
+import API from '../../server/API';
 
 export default ({contact: chat, user}) => {
 
@@ -60,7 +61,16 @@ export default ({contact: chat, user}) => {
       body.current.scrollTop = body.current.scrollHeight - body.current.offsetHeight
     }
 
-  },[messageList])
+  },[messageList]);
+
+
+  useEffect(() => {
+
+    setMessageList([])
+
+    let unsub = API.onChatContent(chat.chatId, setMessageList)
+
+  },[chat.chatId])
 
 
   const openEmoji = () => {
