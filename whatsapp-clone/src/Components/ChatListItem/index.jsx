@@ -8,7 +8,7 @@ import Images from '../../Images'
 import API from '../../server/API';
 
 
-export default ( { active, chat, setActiveChat }) => {
+export default ( { active, chat, setActiveChat, onClick }) => {
 
   let image = chat.image
 
@@ -43,7 +43,7 @@ export default ( { active, chat, setActiveChat }) => {
 
   return (
 
-    <div className = {`contact-card  ${active ? 'active' : ''}`} onClick={handleClick}>
+    <div className = {`contact-card  ${active ? 'active' : ''}`} onClick={onClick}>
 
       <img
         src={image === undefined || image === null || image === "" ? Images.USER : image} className='avatar' />

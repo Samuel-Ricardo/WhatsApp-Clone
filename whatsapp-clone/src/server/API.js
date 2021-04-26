@@ -96,6 +96,8 @@ export default {
         with: [user.id]
       })
     });
+
+    return newChat;
   },
 
   onChatList: (userId, setContacts) => {
@@ -115,6 +117,5 @@ export default {
         }
       }
     })
-
   }
 }

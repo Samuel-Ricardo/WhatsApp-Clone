@@ -130,7 +130,8 @@ function App() {
               key={key}
               chat={chat}
               setActiveChat={setActiveChat}
-              active={activeChat.id === chat.id}
+              onClick={() => setActiveChat(contacts[key])}
+              active={activeChat.chatId === chat.chatId}
             />
 
               ))
@@ -143,7 +144,7 @@ function App() {
 
       <div className='content-area'>
 
-        {activeChat.id !== undefined &&
+        {activeChat.chatId !== undefined &&
 
           <Chat
             contact={activeChat}
@@ -151,7 +152,7 @@ function App() {
           />
         }
 
-        {activeChat.id === undefined &&
+        {activeChat.chatId === undefined &&
 
           <ChatIntro />
         }

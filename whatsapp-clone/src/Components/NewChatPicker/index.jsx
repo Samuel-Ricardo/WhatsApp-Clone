@@ -30,11 +30,11 @@ export default ({ contacts, user, isShowing, setShowing, setActiveChat }) => {
 
   const createNewChat = async (contact) => {
 
-    API.newChat(user,contact)
+    const chat = await API.newChat(user,contact)
 
     contacts.push(contact)
 
-    await setActiveChat(contact)
+    await setActiveChat(chat)
 
     close()
 
