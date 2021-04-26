@@ -150,6 +150,31 @@ export default {
         body,
         date: now
       })
-    })
+    });
+
+    for (let i in users) {
+
+      let user = await database.collection('users').doc(users[i]).get();
+
+      let userData = user.data();
+
+      if (userData.chats) {
+
+        let chats = [...userData];
+
+        for (let e in chats) {
+
+          if (chats[e].chatId == chatData.chatId) {
+
+            chats[e].lastMessage = body;
+            chats[e].lastMessageDate = now;
+          }
+        };
+
+        await database.collection('User').doc(user[i]).update({
+          chats
+        })
+      }
+    }
   }
 }
