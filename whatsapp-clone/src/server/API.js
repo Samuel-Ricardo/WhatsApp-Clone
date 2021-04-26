@@ -8,6 +8,7 @@ const firebaseapp = firebase.initializeApp(firebase_config)
 const database = firebase.firestore()
 
 export default {
+
   facebookLoginPopup: async () => {
     const provider = new firebase.auth.FacebookAuthProvider();
     let result = await firebase.auth().signInWithPopup(provider)
@@ -43,6 +44,30 @@ export default {
     })
 
     return list;
+  },
+
+  getUser: async (userId) => {
+
+    let user = {}
+
+    let results = await database.collection("User").get();
+
+    results.forEach(result => {
+
+      let userData = result.data()
+
+      if (result.id === userId) {
+
+        user = {
+          id: result.id,
+          name: userData.name,
+          avatar: userData.avatar
+        }
+
+      }
+    });
+
+    return user;
   },
 
   newChat: async (user, contact) => {

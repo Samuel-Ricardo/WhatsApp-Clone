@@ -2,11 +2,11 @@
 :root {
 
   --chat-border-color: #EEE;
-  --chat-hover-color: #F5F5F5;
+  --chat-hover-color: #EBEBEB ;
 }
 
 .active {
-  background-color: #EBEBEB;
+  background-color: #F5F5F5 ;
 }
 
 .contact-card {
@@ -15,6 +15,8 @@
   cursor: pointer;
   align-items: center;
   height: 70px;
+
+  background-color: white;
 
 }
 

@@ -5,18 +5,19 @@ import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 
 import Colors from '../../util/colors'
 import Images from '../../Images'
+import API from '../../server/API';
 
 
-export default ( { active, contact, onClick }) => {
+export default ( { active, chat, setActiveChat }) => {
 
-  let image = contact.image
+  let image = chat.image
 
   const [date, setDate] = useState('')
 
   useEffect(() => {
 
-    if (contact.lastMessageDate > 0) {
-      let newDate = new Date(contact.lastMessageDate.seconds * 1000)
+    if (chat.lastMessageDate > 0) {
+      let newDate = new Date(chat.lastMessageDate.seconds * 1000)
 
       let hours = newDate.getHours();
       let minutes = newDate.getMinutes();
@@ -28,13 +29,21 @@ export default ( { active, contact, onClick }) => {
 
     }
 
-  },[contact])
+  },[chat])
 
+  const handleClick = async () => {
 
+    const contact = await API.getUser(chat.with[0])
+
+    setActiveChat(contact);
+
+    console.log(contact)
+
+  }
 
   return (
 
-    <div className = {`contact-card  ${active ? 'active' : ''}`} onClick={onClick}>
+    <div className = {`contact-card  ${active ? 'active' : ''}`} onClick={handleClick}>
 
       <img
         src={image === undefined || image === null || image === "" ? Images.USER : image} className='avatar' />
@@ -45,7 +54,7 @@ export default ( { active, contact, onClick }) => {
         <div className="line">
 
           <div className="name">
-            {contact.title}
+            {chat.title}
           </div>
 
           <div className="date">
@@ -57,7 +66,7 @@ export default ( { active, contact, onClick }) => {
         <div className="line">
 
           <div className="lastMessage">
-            <p>{contact.lastMessage}</p>
+            <p>{chat.lastMessage}</p>
           </div>
 
         </div>

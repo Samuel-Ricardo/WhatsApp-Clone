@@ -39,9 +39,7 @@ function App() {
 
     if (user !== null) {
       let unsub = API.onChatList(user.id, setContacts);
-          console.log("")
-          console.log(unsub)
-          console.log("")
+
       return unsub
     }
   },[user])
@@ -126,13 +124,13 @@ function App() {
 
         <div className='chatlist'>
 
-          {contacts.map((contact, key) => (
+          {contacts.map((chat, key) => (
 
             <ChatListItem
               key={key}
-              contact={contact}
-              onClick={() => setActiveChat(contacts[key])}
-              active={activeChat.id === contact.id}
+              chat={chat}
+              setActiveChat={setActiveChat}
+              active={activeChat.id === chat.id}
             />
 
               ))
