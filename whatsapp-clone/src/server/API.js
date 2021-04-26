@@ -127,5 +127,9 @@ export default {
       }
 
     })
+  },
+
+  sendMessage: (chatData, userId, type, text) => {
+
   }
 }

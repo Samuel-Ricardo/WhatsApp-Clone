@@ -19,7 +19,7 @@ import colors from '../../util/colors';
 import Images from '../../Images';
 import API from '../../server/API';
 
-export default ({contact: chat, user}) => {
+export default ({chat, user}) => {
 
 
   const [isEmojiOpen, setEmojiOpen] = useState(false);
@@ -98,6 +98,9 @@ export default ({contact: chat, user}) => {
 
   const handleSendMessage = () => {
 
+    if (text !== "") {
+      API.sendMessage(chat, user.id, "text", text)
+    }
   }
 
   const handleMicClick = () => {
