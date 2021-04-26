@@ -50,7 +50,14 @@ export default {
 
     let user = {}
 
-    let results = await (await database.collection("User").doc(userId).get()).data
+    let result = await (await database.collection("User").doc(userId).get()).data()
+
+
+    user = {
+      id: result.id,
+      name: result.name,
+      avatar: result.avatar
+    }
 
     // results.forEach(result => {
 
@@ -67,9 +74,8 @@ export default {
     //   }
     // });
 
-    //return user;
+    return user;
 
-    return results;
   },
 
   newChat: async (user, contact) => {
