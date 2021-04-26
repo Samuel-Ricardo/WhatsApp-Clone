@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './ChatListItem.css'
 
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
@@ -9,7 +9,26 @@ import Images from '../../Images'
 
 export default ( { active, contact, onClick }) => {
 
-  let image =  contact.image
+  let image = contact.image
+
+  const [date, setDate] = useState('')
+
+  useEffect(() => {
+
+    if (contact.lastMessageDate > 0) {
+      let newDate = new Date(contact.lastMessageDate.seconds * 1000)
+
+      let hours = newDate.getHours();
+      let minutes = newDate.getMinutes();
+
+      hours = hours < 10 ? "0" + hours : hours;
+      minutes = minutes < 10 ? "0" + minutes : minutes
+
+      setDate(`${hours}:${minutes}`)
+
+    }
+
+  },[contact])
 
 
 
@@ -30,7 +49,7 @@ export default ( { active, contact, onClick }) => {
           </div>
 
           <div className="date">
-            31/01/2020
+            {date}
           </div>
 
         </div>
@@ -38,7 +57,7 @@ export default ( { active, contact, onClick }) => {
         <div className="line">
 
           <div className="lastMessage">
-            <p>Pedro falácias >-()</p>
+            <p>{contact.lastMessage}</p>
           </div>
 
         </div>
