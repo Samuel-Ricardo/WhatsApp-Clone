@@ -18,7 +18,7 @@ import MessageItem from '../MessageItem'
 import colors from '../../util/colors';
 import Images from '../../Images';
 
-export default ({contact, user}) => {
+export default ({contact: chat, user}) => {
 
 
   const [isEmojiOpen, setEmojiOpen] = useState(false);
@@ -26,18 +26,18 @@ export default ({contact, user}) => {
   const [isListening, setListening] = useState(false);
   const [messageList, setMessageList] = useState(
     [
-      {author: contact, text: 'Pedro Comunicações Textuais >()', date: '00:00'},
-      {author: contact, text: ' || Pedro Comunicações Textuais deseja se comunicar com vossa ppessoa >() ||  ', date: '00:00'},
+      {author: chat, text: 'Pedro Comunicações Textuais >()', date: '00:00'},
+      {author: chat, text: ' || Pedro Comunicações Textuais deseja se comunicar com vossa ppessoa >() ||  ', date: '00:00'},
       {author: user, text: 'Pedro Comunicações Textuais >()', date: '00:00'},
       {author: user, text: 'Pedro Comunicações Textuais >() o que deseja comunicar?', date: '00:00'},
 
-      {author: contact, text: 'Pedro Comunicações Textuais >()', date: '00:00'},
-      {author: contact, text: '|| Pedro Comunicações Textuais deseja se comunicar com vossa ppessoa >() ||  ', date: '00:00'},
+      {author: chat, text: 'Pedro Comunicações Textuais >()', date: '00:00'},
+      {author: chat, text: '|| Pedro Comunicações Textuais deseja se comunicar com vossa ppessoa >() ||  ', date: '00:00'},
       {author: user, text: 'Pedro Comunicações Textuais >()', date: '00:00'},
       {author: user, text: 'Pedro Comunicações Textuais >() o que deseja comunicar?', date: '00:00'},
 
-      {author: contact, text: 'Pedro Comunicações Textuais >()', date: '00:00'},
-      {author: contact, text: ' || Pedro Comunicações Textuais deseja se comunicar com vossa ppessoa >() ||  ', date: '00:00'},
+      {author: chat, text: 'Pedro Comunicações Textuais >()', date: '00:00'},
+      {author: chat, text: ' || Pedro Comunicações Textuais deseja se comunicar com vossa ppessoa >() ||  ', date: '00:00'},
       {author: user, text: 'Pedro Comunicações Textuais >()', date: '00:00'},
       {author: user, text: 'Pedro Comunicações Textuais >() o que deseja comunicar?', date: '00:00'}
     ]);
@@ -118,10 +118,10 @@ export default ({contact, user}) => {
       <header>
         <div className="info">
 
-          <img className="perfil-image" src={contact.avatar === undefined || contact.avatar === null || contact.avatar === "" ? Images.USER : contact.avatar}/>
+          <img className="perfil-image" src={chat.image === undefined || chat.image === null || chat.image === "" ? Images.USER : chat.image}/>
 
           <div className="name">
-            {contact.name}
+            {chat.title}
           </div>
         </div>
 
