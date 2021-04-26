@@ -147,7 +147,7 @@ function App() {
         {activeChat.chatId !== undefined &&
 
           <Chat
-            contact={activeChat}
+            chat={activeChat}
             user={user}
           />
         }

@@ -117,5 +117,15 @@ export default {
         }
       }
     })
+  },
+
+  onChatContent: (chatId, setMessageList) => {
+    return database.collection('Chat').doc(chatId).onSnapshot(doc => {
+      if (doc.exists) {
+        let chatData = doc.data();
+        setMessageList(data.messages);
+      }
+
+    })
   }
 }
