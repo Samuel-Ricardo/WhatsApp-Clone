@@ -25,23 +25,8 @@ export default ({chat, user}) => {
   const [isEmojiOpen, setEmojiOpen] = useState(false);
   const [text, setText] = useState("");
   const [isListening, setListening] = useState(false);
-  const [messageList, setMessageList] = useState(
-    [
-      {author: chat, text: 'Pedro Comunicações Textuais >()', date: '00:00'},
-      {author: chat, text: ' || Pedro Comunicações Textuais deseja se comunicar com vossa ppessoa >() ||  ', date: '00:00'},
-      {author: user, text: 'Pedro Comunicações Textuais >()', date: '00:00'},
-      {author: user, text: 'Pedro Comunicações Textuais >() o que deseja comunicar?', date: '00:00'},
-
-      {author: chat, text: 'Pedro Comunicações Textuais >()', date: '00:00'},
-      {author: chat, text: '|| Pedro Comunicações Textuais deseja se comunicar com vossa ppessoa >() ||  ', date: '00:00'},
-      {author: user, text: 'Pedro Comunicações Textuais >()', date: '00:00'},
-      {author: user, text: 'Pedro Comunicações Textuais >() o que deseja comunicar?', date: '00:00'},
-
-      {author: chat, text: 'Pedro Comunicações Textuais >()', date: '00:00'},
-      {author: chat, text: ' || Pedro Comunicações Textuais deseja se comunicar com vossa ppessoa >() ||  ', date: '00:00'},
-      {author: user, text: 'Pedro Comunicações Textuais >()', date: '00:00'},
-      {author: user, text: 'Pedro Comunicações Textuais >() o que deseja comunicar?', date: '00:00'}
-    ]);
+  const [messageList, setMessageList] = useState([])
+  const [users, setUsers] = useState([])
 
 
   const body = useRef();
@@ -68,7 +53,7 @@ export default ({chat, user}) => {
 
     setMessageList([])
 
-    let unsub = API.onChatContent(chat.chatId, setMessageList)
+    let unsub = API.onChatContent(chat.chatId, setMessageList, setUsers)
 
   },[chat.chatId])
 

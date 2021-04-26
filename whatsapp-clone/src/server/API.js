@@ -127,18 +127,19 @@ export default {
     })
   },
 
-  onChatContent: (chatId, setMessageList) => {
+  onChatContent: (chatId, setMessageList, setUsers) => {
     return database.collection('Chat').doc(chatId).onSnapshot(doc => {
       if (doc.exists) {
         let chatData = doc.data();
         console.log(chatData)
         setMessageList(chatData.messages);
+        setUsers(data.users)
       }
 
     })
   },
 
-  sendMessage: (chatData, userId, type, body) => {
+  sendMessage: (chatData, userId, type, body, users) => {
 
     let now = new Date();
 
