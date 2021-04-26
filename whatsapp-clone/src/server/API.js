@@ -50,24 +50,26 @@ export default {
 
     let user = {}
 
-    let results = await database.collection("User").get();
+    let results = await (await database.collection("User").doc(userId).get()).data
 
-    results.forEach(result => {
+    // results.forEach(result => {
 
-      let userData = result.data()
+    //   let userData = result.data()
 
-      if (result.id === userId) {
+    //   if (result.id === userId) {
 
-        user = {
-          id: result.id,
-          name: userData.name,
-          avatar: userData.avatar
-        }
+    //     user = {
+    //       id: result.id,
+    //       name: userData.name,
+    //       avatar: userData.avatar
+    //     }
 
-      }
-    });
+    //   }
+    // });
 
-    return user;
+    //return user;
+
+    return results;
   },
 
   newChat: async (user, contact) => {
@@ -123,7 +125,7 @@ export default {
     return database.collection('Chat').doc(chatId).onSnapshot(doc => {
       if (doc.exists) {
         let chatData = doc.data();
-        setMessageList(data.messages);
+        setMessageList(chatData.messages);
       }
 
     })
@@ -131,5 +133,12 @@ export default {
 
   sendMessage: (chatData, userId, type, text) => {
 
+    let now = new Date();
+
+    database.collection("Chat").doc(chatData.chatId).update({
+      messages: firebase.firestore.FieldValue.arrayUnion({
+
+      })
+    })
   }
 }
