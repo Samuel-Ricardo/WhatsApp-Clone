@@ -115,10 +115,6 @@ export default {
       if (doc.exists) {
         let userData = doc.data();
 
-        console.log("")
-          console.log(userData)
-        console.log("")
-
         if (userData.chats) {
 
           setContacts(userData.chats)
@@ -133,13 +129,13 @@ export default {
         let chatData = doc.data();
         console.log(chatData)
         setMessageList(chatData.messages);
-        setUsers(data.users)
+        setUsers(chatData.users)
       }
 
     })
   },
 
-  sendMessage: (chatData, userId, type, body, users) => {
+  sendMessage: async (chatData, userId, type, body, users) => {
 
     let now = new Date();
 
@@ -154,24 +150,24 @@ export default {
 
     for (let i in users) {
 
-      let user = await database.collection('users').doc(users[i]).get();
+      let user = await database.collection('User').doc(users[i]).get();
 
       let userData = user.data();
 
       if (userData.chats) {
 
-        let chats = [...userData];
+        let chats = [...userData.chats];
 
         for (let e in chats) {
 
-          if (chats[e].chatId == chatData.chatId) {
+          if (chats[e].chatId === chatData.chatId) {
 
             chats[e].lastMessage = body;
             chats[e].lastMessageDate = now;
           }
         };
 
-        await database.collection('User').doc(user[i]).update({
+        await database.collection('User').doc(users[i]).update({
           chats
         })
       }

@@ -84,7 +84,13 @@ export default ({chat, user}) => {
   const handleSendMessage = () => {
 
     if (text !== "") {
-      API.sendMessage(chat, user.id, "text", text)
+
+      console.log("")
+      console.log("users: ")
+      console.log(users)
+      console.log("")
+
+      API.sendMessage(chat, user.id, "text", text, users)
       setText('')
       setEmojiOpen(false)
     }
