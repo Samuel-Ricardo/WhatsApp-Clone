@@ -89,6 +89,12 @@ export default ({contact: chat, user}) => {
     setText(''+text + objEmoji.emoji)
   }
 
+  const handleInputKeyUp = (input) => {
+
+    if (input.keyCode == 13) {
+      handleSendMessage()
+    }
+  }
 
   const handleSendMessage = () => {
 
@@ -215,7 +221,8 @@ export default ({contact: chat, user}) => {
             type='search'
             placeholder='Pedro Digitações >:[]'
             value={text}
-            onChange={ typed => setText(typed.target.value)}
+            onChange={typed => setText(typed.target.value)}
+            onKeyUp={handleInputKeyUp}
             />
 
         </div>
