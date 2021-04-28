@@ -1,6 +1,13 @@
 import firebase from 'firebase';
 import 'firebase/firebase-auth';
-import 'firebase/firebase-firestore'
+import 'firebase/firebase-firestore';
+
+import 'firebase/auth';        // for authentication
+import 'firebase/storage';     // for storage
+import 'firebase/database';    // for realtime database
+import 'firebase/firestore';   // for cloud firestore
+import 'firebase/messaging';   // for cloud messaging
+import 'firebase/functions';   // for cloud functions
 
 import firebase_config from './firebase_config';
 
