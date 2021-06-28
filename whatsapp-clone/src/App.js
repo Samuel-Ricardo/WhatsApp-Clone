@@ -67,6 +67,12 @@ function App() {
       avatar: user.photoURL
 
     };
+
+    console.log('')
+    console.log('logeduser')
+    console.log('')
+    console.log(loggedUser)
+
     await API.addUser(loggedUser)
     setUser(loggedUser);
 
