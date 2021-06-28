@@ -52,6 +52,13 @@ function App() {
 
 
   const handleLoginData = async (user) => {
+    alert('Logando...')
+
+    console.log('')
+    console.log('logando')
+    console.log('')
+    console.log(user)
+
 
     let loggedUser = {
 
