@@ -11,8 +11,8 @@ import 'firebase/functions';   // for cloud functions
 
 import firebase_config from './firebase_config';
 
-const firebaseapp = firebase.initializeApp(firebase_config)
-const database = firebaseapp.firestore()
+const firebaseApp = firebase.initializeApp(firebase_config)
+const database = firebaseApp.firestore()
 
 
 
@@ -20,7 +20,7 @@ export default {
 
   facebookLoginPopup: async () => {
     const provider = new firebase.auth.FacebookAuthProvider();
-    let result = await firebase.auth().signInWithPopup(provider)
+    let result = await firebaseApp.auth().signInWithPopup(provider)
 //firebaseapp.auth().signInWithPopup()
     return result;
   },
