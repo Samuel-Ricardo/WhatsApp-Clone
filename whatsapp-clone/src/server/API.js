@@ -12,7 +12,7 @@ import 'firebase/functions';   // for cloud functions
 import firebase_config from './firebase_config';
 
 const firebaseapp = firebase.initializeApp(firebase_config)
-const database = firebase.firestore()
+const database = firebaseapp.firestore()
 
 
 
