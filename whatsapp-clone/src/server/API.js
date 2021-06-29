@@ -19,9 +19,29 @@ const database = firebaseApp.firestore()
 export default {
 
   facebookLoginPopup: async () => {
+
+      console.log('')
+  console.log('Start login')
+    console.log('')
+
     const provider = new firebase.auth.FacebookAuthProvider();
+
+    console.log('')
+console.log('get facebook provider')
+    console.log('')
+    console.log('')
+console.log(provider)
+    console.log('')
+
     let result = await firebaseApp.auth().signInWithPopup(provider)
 //firebaseapp.auth().signInWithPopup()
+    
+console.log('')
+console.log('Login Result')
+console.log('')
+    console.log(result)
+    console.log('')
+
     return result;
   },
 
