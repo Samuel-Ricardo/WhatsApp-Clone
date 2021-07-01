@@ -71,7 +71,7 @@ Desktop version
 
 Mobile version 
 
-  > <img width='700' src='https://github.com/Samuel-Ricardo/WhatsApp-Clone/blob/master/readme_files/WhatsApp2_mobile_Video.gif'/>
+  > <img width='700px' src='https://github.com/Samuel-Ricardo/WhatsApp-Clone/blob/master/readme_files/WhatsApp2_mobile_Video.gif'/>
 
 ## 👨‍💻 How to use
 
@@ -85,6 +85,42 @@ $ npm install
 $ npm start
 ```
 
+
 ## 📄 License
 
 This repository is hosted under the MIT License.
+
+
+<h2 id="author">
+  :octocat: Author
+</h2>
+
+<br>
+
+<a href="https://www.linkedin.com/in/samuel-ricardo-cabral/">
+
+  <img width="250px" src="https://github.com/Samuel-Ricardo/RocketPay/blob/master/readmefile/github.jpg"/>
+
+  <br>
+
+   <p><b>Samuel Ricardo</b></p>
+   
+</a>
+
+<h1 align="rigth">
+  
+<a href="https://www.linkedin.com/in/samuel-ricardo-cabral/">
+  
+  <img width = "115px" src="https://img.shields.io/badge/Linkedin-1781EB?color=blue&style=for-the-badge&logo=LinkedIn" /> 
+  
+<a>
+
+<a href="https://www.instagram.com/samuel_ricardo.ex/">
+  
+  <img width = "130px" src="https://img.shields.io/badge/Instagram-1781EB?color=purple&style=for-the-badge&logo=Instagram" /> 
+  
+<a>
+  
+<h1>
+
+<br>
