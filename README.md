@@ -8,10 +8,10 @@
 
 ## ℹ About
 <p>
-  O Whatsapp 2 foi feito com fins de estudo, criado do 0 com React + Firebase, foi baseado no aplicativo do Whatsapp Web, para registrar é necessário o login com alguma conta Facebook, o chat funciona em tempo real, com usuários reais cadastrados no servidor, o armazenamento ficou a cargo do banco de dados do Firebase Firestore.
+  Whatsapp 2 was made for study purposes, created from 0 with React + Firebase, it was based on the Whatsapp Web application, to register it is necessary to login with a Facebook account, the chat works in real time, with real users registered on the server , the storage was in charge of the Firebase Firestore database.
 </p>
 
- Use o Whatsapp 2 clicando no ícone - __[Whatsapp 2](https://whatsapp-clone-smoky-three.vercel.app/)__
+ Use Whatsapp 2 by clicking on the icon - __[Whatsapp 2](https://whatsapp-clone-smoky-three.vercel.app/)__
 
 > <a href='https://whatsapp-clone-smoky-three.vercel.app/'><img width='' src='https://github.com/Samuel-Ricardo/WhatsApp-Clone/blob/master/readme_files/whatsapp-gradient.png' /></a>
 
