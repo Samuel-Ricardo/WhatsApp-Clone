@@ -1,6 +1,10 @@
 # WhatsApp 2
 
+</br>
+
 > <img width='800' src='https://github.com/Samuel-Ricardo/WhatsApp-Clone/blob/master/readme_files/WhatsApp_2_Image.jpeg'/>
+
+</br>
 
 ## ℹ About
 <p>
@@ -56,3 +60,31 @@
 #
 
 - Among Others...
+
+## 🖥 Desktop
+
+Desktop version
+
+  > <img width='700px' src='https://github.com/Samuel-Ricardo/WhatsApp-Clone/blob/master/readme_files/WhatsApp2_desktop_Video.gif'/>
+
+## 📱 Mobile 
+
+Mobile version 
+
+  > <img width='700' src='https://github.com/Samuel-Ricardo/WhatsApp-Clone/blob/master/readme_files/WhatsApp2_mobile_Video.gif'/>
+
+## 👨‍💻 How to use
+
+You need to have `node.js` in your machine and a package manager (`npm` or `yarn`) to interpret the code and install the dependencies.
+
+```bash
+# To install all the dependencies
+$ npm install
+
+# To run the project
+$ npm start
+```
+
+## 📄 License
+
+This repository is hosted under the MIT License.
