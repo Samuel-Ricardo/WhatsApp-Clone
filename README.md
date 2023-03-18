@@ -97,7 +97,7 @@ This repository is hosted under the MIT License.
 
 <br>
 
-<a href="https://www.linkedin.com/in/samuel-ricardo-cabral/">
+<a href="https://www.linkedin.com/in/samuel-ricardo/">
 
   <img width="250px" src="https://github.com/Samuel-Ricardo/RocketPay/blob/master/readmefile/github.jpg"/>
 
@@ -109,7 +109,7 @@ This repository is hosted under the MIT License.
 
 <h1 align="rigth">
   
-<a href="https://www.linkedin.com/in/samuel-ricardo-cabral/">
+<a href="https://www.linkedin.com/in/samuel-ricardo/">
   
   <img width = "115px" src="https://img.shields.io/badge/Linkedin-1781EB?color=blue&style=for-the-badge&logo=LinkedIn" /> 
   
