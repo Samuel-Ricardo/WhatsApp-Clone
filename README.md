@@ -99,7 +99,7 @@ This repository is hosted under the MIT License.
 
 <a href="https://www.linkedin.com/in/samuel-ricardo/">
 
-  <img width="250px" src="https://github.com/Samuel-Ricardo/RocketPay/blob/master/readmefile/github.jpg"/>
+  <img width="250px" src="https://github.com/Samuel-Ricardo/bolao-da-copa/raw/main/readme_files/IMG_20220904_220148_188.jpg"/>
 
   <br>
 
